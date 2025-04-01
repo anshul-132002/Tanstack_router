@@ -1,9 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/home')({
+import React from 'react'
+export const Route = createFileRoute('/users/')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  return <div>Hello "/home"!</div>
+  return <div>Hello "/users/"!</div>
 }
