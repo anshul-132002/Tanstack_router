@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 export const Route = createRootRoute({
   component: RootComponent,
+  notFoundComponent:()=> <div>Page not found....</div>
 });
 
 function RootComponent() {
