@@ -1,0 +1,22 @@
+import * as React from "react";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
+import Navbar from "../components/Navbar";
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+export const Route = createRootRoute({
+  component: RootComponent,
+  notFoundComponent:()=> <div>Page not found....</div>
+});
+
+function RootComponent() {
+  return (
+    <React.Fragment>
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Outlet />
+      </div>
+      <TanStackRouterDevtools/>
+    </React.Fragment>
+  );
+}
